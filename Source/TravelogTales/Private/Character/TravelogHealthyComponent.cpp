@@ -19,14 +19,7 @@ UTravelogHealthyComponent::UTravelogHealthyComponent()
 }
 
 
-// Called when the game starts
-void UTravelogHealthyComponent::BeginPlay()
-{
-	Super::BeginPlay();
 
-	// ...
-	
-}
 
 void UTravelogHealthyComponent::InitializeWithAbilitySystem(UTravelogAbilitySystemComponent* InASC)
 {
