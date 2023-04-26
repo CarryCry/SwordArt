@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{4E466426-46B1-C182-66F0-A0BE723143C0}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TravelogTales",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"ALSV4_CPP",
+				"GameplayAbilities",
+				"CoreUObject",
+				"Engine",
+				"UMG",
+				"Blutility"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "VRM4U",
+			"Enabled": true
+		}
+	]
+}
