@@ -10,6 +10,7 @@ ATravelogCharacter::ATravelogCharacter(const FObjectInitializer& ObjectInitializ
 	HealthComponent = CreateDefaultSubobject<UTravelogHealthyComponent>(TEXT("HealthComponent"));
 	EquipmentComponent = CreateDefaultSubobject<UTravelogEquipmentComponent>(TEXT("EquipmentComponent"));
 	InventoryComponent = CreateDefaultSubobject<UTravelogInventoryComponent>(TEXT("InventoryComponent"));
+	CooldownManagerComponent = CreateDefaultSubobject<UCooldownManagerComponent>(TEXT("CooldownManagerComponent"));
 }
 
 UAbilitySystemComponent* ATravelogCharacter::GetAbilitySystemComponent() const

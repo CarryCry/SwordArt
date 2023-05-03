@@ -8,6 +8,7 @@
 #include "AbilitySystemComponent.h"
 #include "TravelogEquipmentComponent.h"
 #include "TravelogInventoryComponent.h"
+#include "Abilities/CooldownManagerComponent.h"
 #include "Abilities/TravelogAbilitySystemComponent.h"
 #include "Character/TravelogHealthyComponent.h"
 #include "TravelogCharacter.generated.h"
@@ -33,7 +34,7 @@ public:
 
 
 protected:
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Abilities")
 	UTravelogAbilitySystemComponent* AbilitySystemComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Health")
@@ -44,6 +45,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
 	UTravelogInventoryComponent* InventoryComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "CoolDown")
+	UCooldownManagerComponent* CooldownManagerComponent;
 	
 	
 	

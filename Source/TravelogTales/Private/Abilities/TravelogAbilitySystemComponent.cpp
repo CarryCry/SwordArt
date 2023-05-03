@@ -89,6 +89,21 @@ bool UTravelogAbilitySystemComponent::RemoveGameplayEffect(FActiveGameplayEffect
 	return false;
 }
 
+void UTravelogAbilitySystemComponent::NotifyAbilityActivated(const FGameplayAbilitySpecHandle Handle,
+	UGameplayAbility* Ability)
+{
+	UTravelogGameplayAbility* TravelogAbility = Cast<UTravelogGameplayAbility>(Ability);
+	if (TravelogAbility)
+	{
+		float CooldownDuration = TravelogAbility->CooldownDuration;
+
+		// 触发委托事件
+		OnAbilityActivated.Broadcast(Ability, CooldownDuration);
+	}
+	
+	Super::NotifyAbilityActivated(Handle, Ability);
+}
+
 /*
 void UTravelogAbilitySystemComponent::ActivateAbilitiesWithTags(const FGameplayTagContainer& TagsToActivate,
 	bool bActivate)

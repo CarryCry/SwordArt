@@ -5,11 +5,16 @@
 #include "CoreMinimal.h"
 #include "AbilitySystemComponent.h"
 #include "GameplayTagsManager.h"
+#include "Abilities/Attribute/TravelogCooldownAttributeSet.h"
+#include "Abilities/TravelogGameplayAbility.h"
 #include "TravelogAbilitySystemComponent.generated.h"
 
 /**
  * 
  */
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnAbilityActivated, UGameplayAbility*, ActivatedAbility, float, CooldownDuration);
+
 UCLASS()
 class TRAVELOGTALES_API UTravelogAbilitySystemComponent : public UAbilitySystemComponent
 {
@@ -35,6 +40,11 @@ public:
 	// 从这个ASC移除一个游戏效果
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	bool RemoveGameplayEffect(FActiveGameplayEffectHandle Handle);
+
+	virtual void NotifyAbilityActivated(const FGameplayAbilitySpecHandle Handle, UGameplayAbility* Ability) override;
+
+	UPROPERTY(BlueprintAssignable, Category = "Abilities")
+	FOnAbilityActivated OnAbilityActivated;
 /*
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void ActivateAbilitiesWithTags(const FGameplayTagContainer& TagsToActivate, bool bActivate);
