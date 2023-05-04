@@ -8,7 +8,7 @@ public class TravelogTales : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" ,"ALSV4_CPP","GameplayAbilities", "GameplayTasks", "GameplayTags","UMG", "Blutility" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" ,"ALSV4_CPP","GameplayAbilities", "GameplayTasks", "GameplayTags","UMG", "Blutility", "Niagara" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

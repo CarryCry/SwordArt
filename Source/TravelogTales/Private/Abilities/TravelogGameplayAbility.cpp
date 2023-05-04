@@ -46,8 +46,6 @@ bool UTravelogGameplayAbility::CanActivateAbility(const FGameplayAbilitySpecHand
 			}
 		}
 	}
-
 	
-
 	return true;
 }
