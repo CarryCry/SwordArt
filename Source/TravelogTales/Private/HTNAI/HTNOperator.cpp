@@ -3,3 +3,7 @@
 
 #include "HTNAI/HTNOperator.h"
 
+void UHTNOperator::ApplyOperator_Implementation(UHTNWorldState* WorldState)
+{
+	
+}

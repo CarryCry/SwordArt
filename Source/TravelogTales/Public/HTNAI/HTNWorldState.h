@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class TRAVELOGTALES_API UHTNWorldState : public UObject
 {
 	GENERATED_BODY()
